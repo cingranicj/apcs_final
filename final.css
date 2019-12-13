@@ -1,0 +1,20 @@
+body {
+    background-color: grey;
+    text-align: center; 
+}
+
+#h2one {
+    color: crimson;
+}
+
+#h2two {
+    color: gold;
+}
+
+#h2three {
+    color: green;
+}
+
+#h2four {
+    color: blue;
+}

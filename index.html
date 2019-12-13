@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="final.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Budgeting Tool</title>
@@ -16,10 +17,12 @@
     </div>
 
     <h2 id="h2two">Purchase History:</h2>
-    <div id="purchasehistory">
+    <div id="PurchaseHistory">
         <div>
-            <input id="purchasehistory" type="text">
-            <button id="addpurchase" class="btn2" data-togle="tooltip" data-placement="right" >Add Purchase(s)</button>
+            <input id="Purchases" type="text">
+            <button id="addPurchase" class="btn2" data-togle="tooltip" data-placement="right" title="Must Have a Minimum of Five Purchases to Utiilze the Graphing Tool" >Add Purchase(s)</button>
+        </div>
+        <div id="purchaseList">
         </div>
     </div>
     
@@ -30,6 +33,14 @@
     <div>
         <button onclick="window.location= 'https://www.forbes.com/top-charities/list/#tab:rank';" class="btn btn-success">Click to Donate</button>
     </div>
+
+    <h2 id="h2four">Account History:</h2>
+    <div>
+        <button id="graphing" class="btn btn-primary">Click to Graph</button>
+    </div>
+
+    <canvas id="myChart"></canvas>
+    <script src="https://cdn.jsdeliver.net/npm/chart.js@2.8.0"></script>
 </body>
 <script src="final.js"></script>
 </html>
