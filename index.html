@@ -9,10 +9,10 @@
 </head>
 <body>
     <h2 id="h2one">Income: </h2>
-    <div id="totalincome">
+    <div id="totalIncome">
         <div>
-            <input id="Income" type="text" name="Income">
-            <button id="addincome" class="btn">Add Income</button>
+            <input id="income" type="text" name="Income">
+            <button id="addIncome" class="btn">Add Income</button>
         </div>
     </div>
 
@@ -37,9 +37,11 @@
     <h2 id="h2four">Account History:</h2>
     <div>
         <button id="graphing" class="btn btn-primary">Click to Graph</button>
+        <!-- this button will serve as where I will be adding a graph to the tool once the user has entered a variety of different numbers into the text boxes above-->
     </div>
 
     <canvas id="myChart"></canvas>
+    <!-- a canvas is the type of graph I want to use. On HTML there are a variety of graphs from the canvas function that can be utilized.-->
     <script src="https://cdn.jsdeliver.net/npm/chart.js@2.8.0"></script>
 </body>
 <script src="final.js"></script>
