@@ -102,6 +102,21 @@ graphingButton.addEventListener('click', () => {
 
 })
 
+function ready() {
+    let x = 1;
+    go.onclick = function() {
+        console.log("Clicked");
+        if (x % 2 == 0) {
+            document.getElementById("money").src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiwpsj2uL_mAhWGVc0KHQBFC-sQjRx6BAgBEAQ&url=http%3A%2F%2Fpngimg.com%2Fimgs%2Fobjects%2Fmoney%2F&psig=AOvVaw2Hw0fVIXaqizCVg2bD_aZM&ust=1576766992210821"
+        }
+        if (x % 2 == 1) {
+            document.getElementById("money").src="http://assets.stickpng.com/thumbs/580b585b2edbce24c47b29f8.png"
+        }
+    }
+    x++;
+}
+document.addEventListener("DOMContentLoaded", ready);
+
 
 
 

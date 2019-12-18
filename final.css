@@ -18,3 +18,9 @@ body {
 #h2four {
     color: blue;
 }
+
+.center {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+}
