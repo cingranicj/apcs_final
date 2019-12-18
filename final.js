@@ -1,26 +1,14 @@
-let li = document.getElementsByTagName('ul') [0];
-let purchaseBox = document.getElementById("Purchases");
-let purchaseButton = document.getElementById("addPurchase");
-let purchases = document.getElementById("purchaseList");
-var income = document.getElementById("Income");
-var incomeButton = document.getElementById("addIncome");
-let totalIncome = " ";
-let parentIncome = document.getElementById("totalIncome");
-let editIncome = document.createElement('button');
-let fullIncome = 0;
-let editbox = document.createElement('input');
-editbox.type = "text";
-editIncome.className = 'btn btn-danger';
-var donateButton = document.getElementById("donateIncome");
-
-// above are the vars that I will be utilizing alongisde the ID's I created in my HTML in order to create a graph and to add the numbers the user has input into the text bars which I created in my HTML.
+class ToolUser {
+    constructor(){
+    }
+}
 
 class BudgetingTool {
     constructor() {
         this.user = new ToolUser();
     }
     storeUserIncome() {
-        totalincome = income.value;
+        totalincome = income.value ;
         fullIncome = fullIncome + Number.parseInt(totalIncome);
         parentIncome.textContent = fullIncome;
         parentIncome.appendChild(editIncome).textContent = "Edit Income";
@@ -41,10 +29,10 @@ class BudgetingTool {
 
     }
     graphHistory(){
-        let secT = fullIncome- Number.parseInt(purchases.firstElementChild.textContent);
-        let thiT = secT - Number.parseInt(purchases.children[1].textContent);
-        let fouT = thiT - Number.parseInt(purchases.children[2].textContent);
-        let fifT = fouT - Number.parseInt(purchases.children[3].textContent);
+        let secondT = fullIncome - Number.parseInt(purchases.firstElementChild.textContent);
+        let thirdT = secondT - Number.parseInt(purchases.children[1].textContent);
+        let fourtT = thirdT - Number.parseInt(purchases.children[2].textContent);
+        let fifthT = fourtT - Number.parseInt(purchases.children[3].textContent);
 
                 var ctx = document.getElementById('myChart').getContext('2d');
 var chart = new Chart(ctx, {
@@ -60,7 +48,7 @@ var chart = new Chart(ctx, {
 
             backgroundColor: 'rgb(100, 100, 200)',
             borderColor: 'rgb(10, 10, 200)',
-            data: [ fullIncome, secT, thiT , fouT, fifT ]
+            data: [ fullIncome, secondT, thirdT , fourtT, fifthT ]
 
         }]
     },
@@ -72,10 +60,22 @@ var chart = new Chart(ctx, {
 
 }
 
-class ToolUser {
-    constructor(){
-    }
-}
+let li = document.getElementsByTagName('ul') [0];
+let purchaseBox = document.getElementById("Purchases");
+let purchaseButton = document.getElementById("addPurchase");
+let purchases = document.getElementById("purchaseList");
+var income = document.getElementById("Income");
+var incomeButton = document.getElementById("addIncome");
+let totalIncome = " ";
+let parentIncome = document.getElementById("totalIncome");
+let editIncome = document.createElement('button');
+let fullIncome = 0;
+let editbox = document.createElement('input');
+editbox.type = "text";
+editIncome.className = 'btn btn-danger';
+var donateButton = document.getElementById("donateIncome");
+
+// above are the vars that I will be utilizing alongisde the ID's I created in my HTML in order to create a graph and to add the numbers the user has input into the text bars which I created in my HTML.
 
 let bt = new BudgetingTool();
 
