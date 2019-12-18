@@ -82,7 +82,7 @@ let bt = new BudgetingTool();
 
 editIncome.addEventListener('click', () => {
     bt.editIncome();
-     totalIncome = "";
+    totalIncome = "";
 });
 
 
